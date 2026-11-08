@@ -26,6 +26,7 @@ jobs:
         uses: codecov/codecov-action@v5
 
       - name: Run pylint
-        uses: uv run pylint secrets
+        uses: uv run pylint src
+
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
